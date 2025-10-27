@@ -48,9 +48,8 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold leading-tight">
-            <span className="text-gradient">Tecnologia</span>
-            <br />
-            <span className="text-foreground">Que Impulsiona a Inovação</span>
+            <span className="text-gradient">Tecnologia</span>{" "}
+            <span className="text-foreground">que impulsiona a Inovação</span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
@@ -61,7 +60,8 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-cyan group"
+              variant="gradient"
+              className="group"
               onClick={() => scrollToSection("solutions")}
             >
               Conheça Nossas Soluções
