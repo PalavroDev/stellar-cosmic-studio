@@ -1,4 +1,5 @@
 import { Linkedin, Mail, Phone } from 'lucide-react';
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,10 +17,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
-            <div className="text-2xl font-heading font-bold text-gradient mb-4">
-              STELLAR SYNTEC
-            </div>
+             <img src={logo} alt="Stellar Syntec Logo" className="h-16 w-auto" />
             <p className="text-muted-foreground mb-4">
+              <br />
               Desenvolvendo soluções tecnológicas inovadoras que transformam negócios e impulsionam o futuro.
             </p>
             <div className="flex space-x-4">

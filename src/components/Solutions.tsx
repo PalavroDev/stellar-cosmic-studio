@@ -1,4 +1,4 @@
-import { Code, Cog, BarChart3, Palette } from 'lucide-react';
+import { Code, Cog, BarChart3, Palette, Cctv } from 'lucide-react';
 
 const solutions = [
   {
@@ -17,7 +17,7 @@ const solutions = [
     description: 'Transforme dados em insights valiosos com dashboards interativos e análises preditivas avançadas.',
   },
   {
-    icon: Palette,
+    icon: Cctv,
     title: 'Design UX/UI',
     description: 'Experiências digitais memoráveis com interfaces intuitivas que encantam e convertem usuários.',
   },

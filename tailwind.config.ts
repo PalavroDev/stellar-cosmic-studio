@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Orbitron', 'sans-serif'],
+        heading: ['Conthrax', 'sans-serif'],
         body: ['Poppins', 'sans-serif'],
       },
       colors: {

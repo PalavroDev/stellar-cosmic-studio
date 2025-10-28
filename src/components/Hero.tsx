@@ -67,15 +67,16 @@ const Hero = () => {
               Conheça Nossas Soluções
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10"
-              onClick={() => scrollToSection("contact")}
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Fale com um Especialista
-            </Button>
+            <a href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0" target="_blank">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10"
+                >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Fale com um Especialista
+               </Button>
+            </a>
           </div>
         </div>
       </div>

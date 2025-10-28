@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { Link, useLocation } from 'react-router-dom';
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,36 +41,26 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center justify-center space-x-8">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="text-foreground hover:text-primary transition-smooth"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("solutions")}
-              className="text-foreground hover:text-primary transition-smooth"
-            >
+            <Link to="/index.html" className="text-foreground hover:text-primary transition-smooth">
+               Home
+            </Link>
+
+            <Link to="/solutions" className="text-foreground hover:text-primary transition-smooth">
               Soluções
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-foreground hover:text-primary transition-smooth"
-            >
+            </Link>
+
+            <Link to="/projects" className="text-foreground hover:text-primary transition-smooth">
               Projetos
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary transition-smooth"
-            >
-              Sobre Nós
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-primary transition-smooth"
-            >
+            </Link>
+
+            <Link to="/about" className="text-foreground hover:text-primary transition-smooth">
+              Sobre
+            </Link>
+
+            <Link to="/contato" className="text-foreground hover:text-primary transition-smooth">
               Contato
-            </button>
+            </Link>
+
           </nav>
 
           {/* Mobile Menu Button */}
