@@ -48,8 +48,8 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold leading-tight">
-            <span className="text-gradient">Tecnologia</span>{" "}
-            <span className="text-foreground">que impulsiona a Inovação</span>
+            <span className="text-gradient block">TECNOLOGIA</span>
+            <span className="text-foreground block">QUE IMPULSIONA A INOVAÇÃO</span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
