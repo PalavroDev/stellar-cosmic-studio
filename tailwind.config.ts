@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Orbitron', 'sans-serif'],
+        heading: ['Nasalization', 'Orbitron', 'sans-serif'],
         body: ['Poppins', 'sans-serif'],
       },
       colors: {
