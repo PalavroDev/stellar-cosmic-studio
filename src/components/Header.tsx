@@ -39,31 +39,31 @@ const Header = () => {
           <nav className="hidden md:flex items-center justify-center space-x-8">
             <button
               onClick={() => scrollToSection('home')}
-              className="nav-link"
+              className="nav-link whitespace-nowrap"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('solutions')}
-              className="nav-link"
+              className="nav-link whitespace-nowrap"
             >
               Soluções
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="nav-link"
+              className="nav-link whitespace-nowrap"
             >
               Projetos
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="nav-link"
+              className="nav-link whitespace-nowrap"
             >
               Sobre Nós
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="nav-link"
+              className="nav-link whitespace-nowrap"
             >
               Contato
             </button>
