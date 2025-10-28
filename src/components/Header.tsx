@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import logo from '@/assets/logo.png';
@@ -6,6 +7,8 @@ import logo from '@/assets/logo.png';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +19,10 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (!isHomePage) {
+      window.location.href = `/#${id}`;
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -32,7 +39,9 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-20">
           <div className="flex items-center">
-            <img src={logo} alt="Stellar Syntec Logo" className="h-16 w-auto" />
+            <Link to="/">
+              <img src={logo} alt="Stellar Syntec Logo" className="h-16 w-auto cursor-pointer" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -61,12 +70,9 @@ const Header = () => {
             >
               Sobre Nós
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="nav-link whitespace-nowrap"
-            >
+            <Link to="/contato" className="nav-link whitespace-nowrap">
               Contato
-            </button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -105,12 +111,13 @@ const Header = () => {
             >
               Sobre Nós
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
+            <Link
+              to="/contato"
               className="block w-full text-left text-foreground hover:text-primary transition-smooth py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Contato
-            </button>
+            </Link>
           </nav>
         )}
       </div>
