@@ -81,7 +81,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Telefone</p>
-                    <p className="text-foreground">+55 (11) 99999-9999</p>
+                    <p className="text-foreground">+55 (21) 99123-1585</p>
                   </div>
                 </a>
 
@@ -112,83 +112,6 @@ const Contact = () => {
                 Sábado: 9:00 - 13:00
               </p>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="cosmic-card p-8 rounded-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Nome
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="bg-background border-border"
-                  placeholder="Seu nome completo"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  E-mail
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="bg-background border-border"
-                  placeholder="seu@email.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                  Assunto
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="bg-background border-border"
-                  placeholder="Como podemos ajudar?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Mensagem
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  required
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="bg-background border-border min-h-[150px]"
-                  placeholder="Conte-nos mais sobre seu projeto..."
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-cyan group"
-                size="lg"
-              >
-                Enviar Mensagem
-                <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </form>
           </div>
         </div>
       </div>

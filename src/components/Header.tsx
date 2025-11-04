@@ -36,12 +36,14 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-20">
           <div className="flex items-center">
+            <a href="/">
             <img src={logo} alt="Stellar Syntec Logo" className="h-16 w-auto" />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center justify-center space-x-8">
-            <Link to="/index.html" className="text-foreground hover:text-primary transition-smooth">
+            <Link to="/" className="text-foreground hover:text-primary transition-smooth">
                Home
             </Link>
 

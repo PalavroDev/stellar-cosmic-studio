@@ -1,4 +1,4 @@
-import { Code, Cog, BarChart3, Palette, Cctv } from 'lucide-react';
+import { Code, Cog, BarChart3, Palette, Cctv, Server } from 'lucide-react';
 
 const solutions = [
   {
@@ -17,9 +17,9 @@ const solutions = [
     description: 'Transforme dados em insights valiosos com dashboards interativos e análises preditivas avançadas.',
   },
   {
-    icon: Cctv,
-    title: 'Design UX/UI',
-    description: 'Experiências digitais memoráveis com interfaces intuitivas que encantam e convertem usuários.',
+    icon: Server,
+    title: 'Gestão de Infraestrutura',
+    description: 'Soluções completas que abrangem desde a arquitetura e implementação inicial até a manutenção contínua de sistemas.',
   },
 ];
 
@@ -29,7 +29,7 @@ const Solutions = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
-            <span className="text-gradient">Nossas Soluções</span> Tecnológicas
+            Nossas <span className="text-gradient"> Soluções</span> Tecnológicas
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Oferecemos um conjunto completo de serviços para acelerar sua transformação digital

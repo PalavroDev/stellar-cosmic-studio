@@ -14,7 +14,7 @@ const values = [
   {
     icon: Award,
     title: 'Valores',
-    description: 'Inovação contínua, qualidade sem compromissos, parceria com o cliente e transparência em todas as relações.',
+    description: 'Inovação contínua, qualidade, compromisso, parceria com o cliente e transparência em todas as relações.',
   },
 ];
 
