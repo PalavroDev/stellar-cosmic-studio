@@ -118,6 +118,9 @@ All colors MUST be HSL.
 
   .nav-link {
     @apply text-foreground transition-smooth relative;
+    opacity: 0.85;
+    transform: scale(1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .nav-link::after {
@@ -127,9 +130,14 @@ All colors MUST be HSL.
 
   .nav-link:hover {
     @apply text-primary;
+    opacity: 1;
+    transform: scale(1.1);
+    text-shadow: 0 0 20px hsl(190 100% 50% / 0.5);
+    filter: brightness(1.2);
   }
 
   .nav-link:hover::after {
     @apply w-full;
+    box-shadow: 0 0 10px hsl(190 100% 50% / 0.6);
   }
 }
