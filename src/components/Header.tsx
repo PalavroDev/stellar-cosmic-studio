@@ -32,12 +32,12 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 group ${
         isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-20">
+        <div className="grid grid-cols-3 items-center h-20 group-hover:h-24 transition-all duration-300">
           <div className="flex items-center">
             <Link to="/">
               <img src={logo} alt="Stellar Syntec Logo" className="h-16 w-auto cursor-pointer" />
