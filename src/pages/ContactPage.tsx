@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, MapPin, Clock } from 'lucide-react';
+import { MessageCircle, Phone, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -37,9 +37,8 @@ const ContactPage = () => {
               
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
                 Clique no botão abaixo para iniciar uma conversa diretamente com nossa equipe via WhatsApp. 
-                Estamos disponíveis para responder suas dúvidas e agendar uma demonstração.
               </p>
-              
+            
               <Button
                 asChild
                 variant="gradient"
@@ -55,16 +54,16 @@ const ContactPage = () => {
           </div>
 
           {/* Other Contact Methods */}
-          <div className="max-w-5xl mx-auto mb-16">
+          <div className="max-w-2xl mx-auto mb-16">
             <h3 className="text-2xl font-heading font-bold text-center mb-8 text-foreground">
               Outras Formas de Contato
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex justify-center">
               {/* Phone */}
               <a
-                href="tel:+5511999999999"
-                className="cosmic-card p-6 rounded-lg hover:border-primary/50 transition-all duration-300 group"
+                href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0"
+                className="cosmic-card p-6 rounded-lg hover:border-primary/50 transition-all duration-300 group max-w-sm w-full"
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 transition-smooth">
@@ -73,22 +72,9 @@ const ContactPage = () => {
                   <h4 className="text-xl font-heading font-semibold mb-2 text-foreground">
                     Telefone
                   </h4>
-                  <p className="text-muted-foreground">+55 (11) 99999-9999</p>
+                  <p className="text-muted-foreground">+55 (21) 99123-1585</p>
                 </div>
               </a>
-
-              {/* Location */}
-              <div className="cosmic-card p-6 rounded-lg">
-                <div className="flex flex-col items-center text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                    <MapPin className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-heading font-semibold mb-2 text-foreground">
-                    Localização
-                  </h4>
-                  <p className="text-muted-foreground">São Paulo, SP</p>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -111,7 +97,7 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-      </main>
+       </main>
 
       <Footer />
     </div>
