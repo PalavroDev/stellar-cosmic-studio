@@ -70,35 +70,35 @@ const Header = () => {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent 
-                className="w-80 bg-background/95 backdrop-blur-lg border-primary/20 animate-in slide-in-from-top-2 duration-200"
+                className="w-80 bg-background/95 backdrop-blur-lg border-2 border-[#00FEFF] animate-in slide-in-from-top-2 duration-200"
                 align="center"
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <DropdownMenuItem 
                   onClick={() => scrollToSection('solutions')}
-                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-border/50"
+                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
                 >
                   <span className="font-semibold text-base text-foreground">TECHUB DIGITAL</span>
                   <span className="text-sm text-muted-foreground">Soluções para Transformação Digital</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => scrollToSection('solutions')}
-                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-border/50"
+                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
                 >
                   <span className="font-semibold text-base text-foreground">TECHUB DEVICES</span>
                   <span className="text-sm text-muted-foreground">Soluções de Equipamentos de TI</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => scrollToSection('solutions')}
-                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-border/50"
+                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
                 >
                   <span className="font-semibold text-base text-foreground">TECHUB GRAPHICS</span>
                   <span className="text-sm text-muted-foreground">Soluções para Equipamentos Gráficos</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => scrollToSection('solutions')}
-                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-border/50"
+                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
                 >
                   <span className="font-semibold text-base text-foreground">TECHUB CONNECT</span>
                   <span className="text-sm text-muted-foreground">Soluções de Conectividade</span>
