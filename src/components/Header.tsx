@@ -76,39 +76,27 @@ const Header = () => {
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <DropdownMenuItem 
-                  onClick={() => scrollToSection('solutions')}
+                  asChild
                   className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
                 >
-                  <span className="font-semibold text-base text-foreground">TECHUB DIGITAL</span>
-                  <span className="text-sm text-muted-foreground">Soluções para Transformação Digital</span>
+                  <Link to="/automacoes">
+                    <span className="font-semibold text-base text-foreground">AUTOMAÇÕES</span>
+                    <span className="text-sm text-muted-foreground">Soluções para Automação de Workflows</span>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => scrollToSection('solutions')}
                   className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
                 >
-                  <span className="font-semibold text-base text-foreground">TECHUB DEVICES</span>
-                  <span className="text-sm text-muted-foreground">Soluções de Equipamentos de TI</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem 
-                  onClick={() => scrollToSection('solutions')}
-                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
-                >
-                  <span className="font-semibold text-base text-foreground">TECHUB GRAPHICS</span>
-                  <span className="text-sm text-muted-foreground">Soluções para Equipamentos Gráficos</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem 
-                  onClick={() => scrollToSection('solutions')}
-                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
-                >
-                  <span className="font-semibold text-base text-foreground">TECHUB CONNECT</span>
-                  <span className="text-sm text-muted-foreground">Soluções de Conectividade</span>
+                  <span className="font-semibold text-base text-foreground">DESENVOLVIMENTO</span>
+                  <span className="text-sm text-muted-foreground">Soluções de Desenvolvimento de Aplicações e Software</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => scrollToSection('solutions')}
                   className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10"
                 >
-                  <span className="font-semibold text-base text-foreground">TECHUB AUTOMATION</span>
-                  <span className="text-sm text-muted-foreground">Soluções de Identificação e Rastreabilidade</span>
+                  <span className="font-semibold text-base text-foreground">INFRAESTRUTURA</span>
+                  <span className="text-sm text-muted-foreground">Soluções de Equipamentos de TI</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
