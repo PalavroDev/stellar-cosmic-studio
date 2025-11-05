@@ -13,6 +13,7 @@ import {
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -59,14 +60,20 @@ const Header = () => {
               Home
             </button>
             
-            <DropdownMenu>
-              <DropdownMenuTrigger className="nav-link whitespace-nowrap flex items-center gap-1 outline-none">
+            <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
+              <DropdownMenuTrigger 
+                className="nav-link whitespace-nowrap flex items-center gap-1 outline-none"
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
                 Soluções
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent 
                 className="w-80 bg-background/95 backdrop-blur-lg border-primary/20 animate-in slide-in-from-top-2 duration-200"
                 align="center"
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <DropdownMenuItem 
                   onClick={() => scrollToSection('solutions')}
