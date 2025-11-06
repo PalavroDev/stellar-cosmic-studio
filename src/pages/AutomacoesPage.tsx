@@ -16,6 +16,7 @@ import {
   Star
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroBackground from '@/assets/automacoes-hero.jpg';
 
 const AutomacoesPage = () => {
   const services = [
@@ -89,13 +90,13 @@ const AutomacoesPage = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-stellar-dark-muted to-background" />
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'radial-gradient(circle at 20% 50%, hsl(190 100% 50% / 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, hsl(250 100% 44% / 0.2) 0%, transparent 50%)'
+            backgroundImage: `url(${heroBackground})`
           }}
         />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-fade-in">
