@@ -85,11 +85,13 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem 
-                  onClick={() => scrollToSection('solutions')}
+                  asChild
                   className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
                 >
-                  <span className="font-semibold text-base text-foreground">DESENVOLVIMENTO</span>
-                  <span className="text-sm text-muted-foreground">Soluções de Desenvolvimento de Aplicações e Software</span>
+                  <Link to="/desenvolvimento">
+                    <span className="font-semibold text-base text-foreground">DESENVOLVIMENTO</span>
+                    <span className="text-sm text-muted-foreground">Soluções de Desenvolvimento de Aplicações e Software</span>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => scrollToSection('solutions')}
