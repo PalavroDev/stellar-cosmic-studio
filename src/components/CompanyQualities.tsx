@@ -55,16 +55,10 @@ const CompanyQualities = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header with circle */}
-        <div className="flex flex-col items-center gap-8 mb-16 animate-fade-in text-center">
-          <div className="flex-shrink-0">
-            <div className="w-32 h-32 rounded-full bg-primary glow-cyan" />
-          </div>
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-2">
-              Qualidades
-            </h2>
-          </div>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
+            Qualidades
+          </h2>
         </div>
 
         {/* Grid of quality cards */}
