@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
@@ -7,6 +8,7 @@ const projects = [
     description: 'Plataforma completa para gerenciamento de recursos, finanças e operações.',
     technologies: ['React', 'Node.js', 'PostgreSQL'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
+    link: '/automacoes',
   },
   {
     title: 'E-commerce Inteligente',
@@ -44,52 +46,62 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="cosmic-card rounded-lg overflow-hidden group cursor-pointer transition-smooth hover:scale-105"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
-                <div
-                  className={`absolute inset-0 bg-primary/20 transition-opacity duration-300 ${
-                    hoveredIndex === index ? 'opacity-100' : 'opacity-0'
-                  }`}
-                ></div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-2xl font-heading font-semibold text-foreground group-hover:text-primary transition-smooth">
-                    {project.title}
-                  </h3>
-                  <ExternalLink className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+          {projects.map((project, index) => {
+            const ProjectCard = (
+              <div
+                key={index}
+                className="cosmic-card rounded-lg overflow-hidden group cursor-pointer transition-smooth hover:scale-105"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+                  <div
+                    className={`absolute inset-0 bg-primary/20 transition-opacity duration-300 ${
+                      hoveredIndex === index ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  ></div>
                 </div>
                 
-                <p className="text-muted-foreground mb-4">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-2xl font-heading font-semibold text-foreground group-hover:text-primary transition-smooth">
+                      {project.title}
+                    </h3>
+                    <ExternalLink className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+
+            return project.link ? (
+              <Link key={index} to={project.link}>
+                {ProjectCard}
+              </Link>
+            ) : (
+              ProjectCard
+            );
+          })}
         </div>
       </div>
     </section>
