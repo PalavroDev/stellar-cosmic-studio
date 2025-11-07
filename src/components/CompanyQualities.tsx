@@ -45,7 +45,7 @@ const CompanyQualities = () => {
   ];
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-20 bg-muted/30 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -56,19 +56,13 @@ const CompanyQualities = () => {
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with circle */}
-        <div className="flex flex-col lg:flex-row items-center gap-8 mb-16 animate-fade-in">
+        <div className="flex flex-col items-center gap-8 mb-16 animate-fade-in text-center">
           <div className="flex-shrink-0">
             <div className="w-32 h-32 rounded-full bg-primary glow-cyan" />
           </div>
-          <div className="text-center lg:text-left">
+          <div>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-2">
-              Consultoria que entende.
-            </h2>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-2">
-              Plataforma que <span className="text-primary">escala</span>.
-            </h2>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground">
-              Integração que funciona.
+              Qualidades
             </h2>
           </div>
         </div>
