@@ -117,6 +117,9 @@ const Header = () => {
             >
               Sobre Nós
             </button>
+            <Link to="/suporte-tecnico" className="nav-link whitespace-nowrap">
+              Suporte Técnico
+            </Link>
             <Link to="/contato" className="nav-link whitespace-nowrap">
               Contato
             </Link>
@@ -158,6 +161,13 @@ const Header = () => {
             >
               Sobre Nós
             </button>
+            <Link
+              to="/suporte-tecnico"
+              className="block w-full text-left text-foreground hover:text-primary transition-smooth py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Suporte Técnico
+            </Link>
             <Link
               to="/contato"
               className="block w-full text-left text-foreground hover:text-primary transition-smooth py-2"

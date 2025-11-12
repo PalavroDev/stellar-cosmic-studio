@@ -94,7 +94,6 @@ const SuporteTecnicoPage = () => {
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Headset className="h-24 w-24 mx-auto mb-6 text-primary animate-fade-in" />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-fade-in">
             Suporte Técnico Especializado
           </h1>
@@ -167,7 +166,7 @@ const SuporteTecnicoPage = () => {
       <section className="py-20 bg-background/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
-            Por Que Nosso Suporte é Diferente?
+            Por Que Escolher a Stellar Syntec?
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -188,7 +187,7 @@ const SuporteTecnicoPage = () => {
             O Que Nossos Clientes Dizem
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Feedback de empresas que confiam em nosso suporte técnico
+            Resultados reais de empresas que confiaram em nosso suporte técnico
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -224,15 +223,15 @@ const SuporteTecnicoPage = () => {
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Award className="h-16 w-16 mx-auto mb-6 text-primary-foreground" />
           <h2 className="text-4xl font-bold mb-4 text-primary-foreground">
-            Precisa de Suporte Especializado?
+            Pronto Para Ter Suporte 24/7?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Entre em contato e descubra como nossa equipe terceirizada pode ajudar seu negócio
+            Agende uma consultoria gratuita e descubra como nossa equipe terceirizada pode ajudar seu negócio
           </p>
           <Link to="/contato">
             <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90">
               <Target className="mr-2 h-5 w-5" />
-              Fale Conosco
+              Fale Com Especialista
             </Button>
           </Link>
         </div>

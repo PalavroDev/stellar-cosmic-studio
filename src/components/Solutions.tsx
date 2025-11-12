@@ -1,4 +1,4 @@
-import { Code, Cog, BarChart3, Palette, Headset } from 'lucide-react';
+import { Code, Cog, BarChart3, Palette } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const solutions = [
@@ -26,12 +26,6 @@ const solutions = [
     description: 'Experiências digitais memoráveis com interfaces intuitivas que encantam e convertem usuários.',
     link: '#',
   },
-  {
-    icon: Headset,
-    title: 'Suporte Técnico',
-    description: 'Equipe terceirizada especializada disponível 24/7 para garantir a continuidade do seu negócio.',
-    link: '/suporte-tecnico',
-  },
 ];
 
 const Solutions = () => {
@@ -47,7 +41,7 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {solutions.map((solution, index) => {
             const Icon = solution.icon;
             const CardContent = (
