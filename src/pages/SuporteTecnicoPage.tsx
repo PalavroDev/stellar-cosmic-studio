@@ -17,6 +17,7 @@ import {
   Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroBackground from '@/assets/suporte-hero.jpg';
 
 const SuporteTecnicoPage = () => {
   const services = [
@@ -90,7 +91,12 @@ const SuporteTecnicoPage = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroBackground})`
+          }}
+        />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
