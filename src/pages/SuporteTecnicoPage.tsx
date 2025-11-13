@@ -22,64 +22,64 @@ import heroBackground from '@/assets/suporte-hero.jpg';
 const SuporteTecnicoPage = () => {
   const services = [
     {
-      title: "Suporte 24/7",
-      description: "Equipe especializada disponível 24 horas por dia, 7 dias por semana, para resolver suas questões técnicas."
+      title: "Equipe Alocada In-loco",
+      description: "Profissionais especializados integrados à sua equipe, trabalhando presencialmente em sua empresa."
     },
     {
-      title: "Atendimento Multicanal",
-      description: "Atendemos via telefone, chat, e-mail e WhatsApp para sua maior comodidade."
+      title: "Suporte Dedicado",
+      description: "Técnicos exclusivos focados nas necessidades e demandas específicas do seu negócio."
     },
     {
-      title: "Equipe Terceirizada",
-      description: "Contamos com uma equipe terceirizada altamente qualificada e treinada para oferecer o melhor suporte."
+      title: "Integração Total",
+      description: "Nossa equipe se torna parte da sua operação, alinhada à cultura e processos da sua empresa."
     }
   ];
 
   const benefits = [
     {
       icon: Clock,
-      title: "Resposta Rápida",
-      description: "Tempo médio de resposta inferior a 30 minutos"
+      title: "Disponibilidade Imediata",
+      description: "Equipe presente na sua empresa durante o horário comercial ou personalizado"
     },
     {
       icon: Users,
-      title: "Equipe Especializada",
-      description: "Profissionais certificados e experientes"
+      title: "Profissionais Qualificados",
+      description: "Técnicos certificados e com vasta experiência em suporte"
     },
     {
       icon: Shield,
-      title: "Disponibilidade Total",
-      description: "Suporte contínuo sem interrupções"
+      title: "Redução de Custos",
+      description: "Elimine gastos com contratação, treinamento e encargos trabalhistas"
     },
     {
       icon: Zap,
-      title: "Resolução Ágil",
-      description: "95% dos casos resolvidos no primeiro contato"
+      title: "Atendimento Presencial",
+      description: "Resolução rápida de problemas com presença física na sua empresa"
     },
     {
       icon: MessageSquare,
-      title: "Comunicação Clara",
-      description: "Atualizações constantes sobre o status"
+      title: "Alinhamento com sua Cultura",
+      description: "Equipe integrada e adaptada aos processos da sua organização"
     }
   ];
 
   const differentials = [
-    "Equipe terceirizada com expertise comprovada",
-    "Monitoramento proativo de sistemas",
-    "Relatórios detalhados de atendimento",
-    "SLA garantido em contrato",
-    "Base de conhecimento sempre atualizada",
-    "Escalonamento inteligente de chamados"
+    "Profissionais alocados exclusivamente para sua empresa",
+    "Gestão completa da equipe por nossa conta",
+    "Substituição imediata em casos de ausência",
+    "Treinamento contínuo dos profissionais alocados",
+    "Flexibilidade para aumentar ou reduzir a equipe",
+    "Relatórios mensais de performance e atendimentos"
   ];
 
   const testimonials = [
     {
-      quote: "O suporte técnico terceirizado da Stellar Syntec é excepcional. Sempre que precisamos, a equipe está pronta para ajudar.",
+      quote: "A equipe alocada pela Stellar Syntec se integrou perfeitamente ao nosso time. É como se fossem funcionários da casa!",
       author: "Carlos Mendes",
       company: "TechCorp Brasil"
     },
     {
-      quote: "A disponibilidade 24/7 e a qualidade do atendimento fizeram toda a diferença para nossa operação. Altamente recomendado!",
+      quote: "Conseguimos reduzir custos e aumentar a qualidade do suporte. Os profissionais são extremamente competentes e dedicados.",
       author: "Ana Oliveira",
       company: "Digital Solutions"
     }
@@ -101,16 +101,16 @@ const SuporteTecnicoPage = () => {
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-fade-in">
-            Suporte Técnico Especializado
+            Equipe de Suporte Técnico Alocada
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
-            Terceirizamos uma equipe altamente qualificada para oferecer suporte técnico 
-            de excelência 24/7 para o seu negócio
+            Disponibilizamos profissionais qualificados para integrar a equipe de TI da sua empresa, 
+            oferecendo suporte técnico especializado e dedicado
           </p>
           <Link to="/contato">
             <Button size="lg" variant="gradient" className="animate-fade-in">
               <Phone className="mr-2 h-5 w-5" />
-              Contratar Suporte
+              Solicitar Equipe
             </Button>
           </Link>
         </div>
@@ -120,10 +120,10 @@ const SuporteTecnicoPage = () => {
       <section className="py-20 bg-background/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Nossos Serviços de Suporte
+            Como Funciona Nossa Alocação
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Soluções completas de suporte técnico terceirizado para manter sua operação sempre funcionando
+            Disponibilizamos profissionais qualificados para trabalhar na sua empresa como parte da sua equipe de TI
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -145,10 +145,10 @@ const SuporteTecnicoPage = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Benefícios do Nosso Suporte
+            Vantagens da Alocação de Equipe
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Vantagens que garantem a continuidade do seu negócio
+            Benefícios de ter profissionais dedicados trabalhando na sua empresa
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -193,7 +193,7 @@ const SuporteTecnicoPage = () => {
             O Que Nossos Clientes Dizem
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Resultados reais de empresas que confiaram em nosso suporte técnico
+            Empresas que escolheram ter nossa equipe trabalhando em suas instalações
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -229,10 +229,10 @@ const SuporteTecnicoPage = () => {
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Award className="h-16 w-16 mx-auto mb-6 text-primary-foreground" />
           <h2 className="text-4xl font-bold mb-4 text-primary-foreground">
-            Pronto Para Ter Suporte 24/7?
+            Pronto Para Ter Nossa Equipe na Sua Empresa?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Agende uma consultoria gratuita e descubra como nossa equipe terceirizada pode ajudar seu negócio
+            Agende uma consultoria gratuita e descubra como nossos profissionais podem integrar sua equipe de TI
           </p>
           <Link to="/contato">
             <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90">
