@@ -129,6 +129,9 @@ const Header = () => {
             <Link to="/contato" className="nav-link whitespace-nowrap">
               Contato
             </Link>
+            <Link to="/mensagens" className="nav-link whitespace-nowrap">
+              Mensagens
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -173,6 +176,13 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contato
+            </Link>
+            <Link
+              to="/mensagens"
+              className="block w-full text-left text-foreground hover:text-primary transition-smooth py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Mensagens
             </Link>
           </nav>
         )}
