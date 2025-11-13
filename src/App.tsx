@@ -9,6 +9,7 @@ import AutomacoesPage from "./pages/AutomacoesPage";
 import DesenvolvimentoPage from "./pages/DesenvolvimentoPage";
 import InfraestruturaPage from "./pages/InfraestruturaPage";
 import SuporteTecnicoPage from "./pages/SuporteTecnicoPage";
+import MessagesPage from "./pages/MessagesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contato" element={<ContactPage />} />
+          <Route path="/mensagens" element={<MessagesPage />} />
           <Route path="/automacoes" element={<AutomacoesPage />} />
           <Route path="/desenvolvimento" element={<DesenvolvimentoPage />} />
           <Route path="/infraestrutura" element={<InfraestruturaPage />} />
