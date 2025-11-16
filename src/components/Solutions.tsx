@@ -1,4 +1,4 @@
-import { Code, Cog, BarChart3, Palette } from 'lucide-react';
+import { Code, Cog, Headset, Server } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const solutions = [
@@ -15,16 +15,16 @@ const solutions = [
     link: '/automacoes',
   },
   {
-    icon: BarChart3,
-    title: 'Análise de Dados',
-    description: 'Transforme dados em insights valiosos com dashboards interativos e análises preditivas avançadas.',
-    link: '#',
+    icon: Headset,
+    title: 'Suporte Técnico',
+    description: 'Equipe especializada alocada na sua empresa para garantir suporte técnico contínuo e resolução ágil de problemas.',
+    link: '/suporte-tecnico',
   },
   {
-    icon: Palette,
-    title: 'Design UX/UI',
-    description: 'Experiências digitais memoráveis com interfaces intuitivas que encantam e convertem usuários.',
-    link: '#',
+    icon: Server,
+    title: 'Infraestrutura de TI',
+    description: 'Gestão completa da sua infraestrutura tecnológica com segurança, performance e disponibilidade garantidas.',
+    link: '/infraestrutura',
   },
 ];
 
