@@ -95,7 +95,7 @@ const Projects = () => {
             );
 
             return project.link ? (
-              <Link key={index} to={project.link}>
+              <Link key={index} to={project.link} onClick={() => window.scrollTo(0, 0)}>
                 {ProjectCard}
               </Link>
             ) : (
