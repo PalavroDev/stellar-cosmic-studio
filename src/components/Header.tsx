@@ -120,12 +120,9 @@ const Header = () => {
             >
               Projetos
             </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="nav-link whitespace-nowrap"
-            >
+            <Link to="/sobre" className="nav-link whitespace-nowrap">
               Sobre Nós
-            </button>
+            </Link>
             <Link to="/contato" className="nav-link whitespace-nowrap">
               Contato
             </Link>
@@ -164,12 +161,13 @@ const Header = () => {
             >
               Projetos
             </button>
-            <button
-              onClick={() => scrollToSection('about')}
+            <Link
+              to="/sobre"
               className="block w-full text-left text-foreground hover:text-primary transition-smooth py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Sobre Nós
-            </button>
+            </Link>
             <Link
               to="/contato"
               className="block w-full text-left text-foreground hover:text-primary transition-smooth py-2"
