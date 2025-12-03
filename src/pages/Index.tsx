@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Solutions from '@/components/Solutions';
 import Projects from '@/components/Projects';
 import About from '@/components/About';
+import Qualidades from '@/components/Qualidades';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -14,6 +15,7 @@ const Index = () => {
       <main>
         <Hero />
         <Solutions />
+        <Qualidades />
         <Projects />
         <About />
         <Contact />

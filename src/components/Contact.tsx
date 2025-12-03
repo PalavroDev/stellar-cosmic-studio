@@ -1,45 +1,9 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, Linkedin, Send } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, Linkedin } from 'lucide-react';
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Simulate form submission
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve.",
-    });
-
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   return (
-    <section id="contact" className="py-24 relative bg-muted/30">
+    <section id="contact" className="py-24 relative bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
@@ -50,7 +14,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="cosmic-card p-6 rounded-lg">
@@ -73,7 +37,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="tel:+5511999999999"
+                  href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0"
                   className="flex items-center space-x-4 text-muted-foreground hover:text-primary transition-smooth group"
                 >
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-smooth">

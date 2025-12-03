@@ -20,7 +20,7 @@ const values = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-24 bg-muted/30 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
@@ -32,9 +32,9 @@ const About = () => {
         </div>
 
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="cosmic-card p-8 sm:p-12 rounded-lg text-center">
-            <p className="text-lg text-foreground leading-relaxed mb-6">
-              A <span className="text-primary font-semibold">Stellar Syntec</span> nasceu da paixão por tecnologia e do desejo de transformar 
+          <div className="cosmic-card p-8 sm:p-12 rounded-lg text-center ">
+            <p className="text-lg text-foreground leading-relaxed mb-6 ">
+              A <span className="text-primary font-semibold ">Stellar Syntec</span> nasceu da paixão por tecnologia e do desejo de transformar 
               ideias em soluções digitais que fazem a diferença. Nossa equipe combina expertise técnica 
               com visão de negócio para entregar projetos que superam expectativas.
             </p>

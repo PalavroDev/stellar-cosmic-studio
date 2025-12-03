@@ -1,25 +1,33 @@
-import { Code, Cog, BarChart3, Palette, Cctv, Server } from 'lucide-react';
+import { Code, Cog, Headset, Server } from "lucide-react";
 
 const solutions = [
   {
     icon: Code,
-    title: 'Desenvolvimento de Software',
-    description: 'Soluções personalizadas e escaláveis para transformar suas ideias em produtos digitais de alta performance.',
+    title: "Desenvolvimento de Software",
+    description:
+      "Soluções personalizadas e escaláveis para transformar suas ideias em produtos digitais de alta performance.",
+    link: "/desenvolvimento",
   },
   {
     icon: Cog,
-    title: 'Automação de Processos',
-    description: 'Otimize sua operação com sistemas inteligentes que automatizam tarefas repetitivas e aumentam a produtividade.',
+    title: "Automação de Processos",
+    description:
+      "Otimize sua operação com sistemas inteligentes que automatizam tarefas repetitivas e aumentam a produtividade.",
+    link: "/automacoes",
   },
   {
-    icon: BarChart3,
-    title: 'Análise de Dados',
-    description: 'Transforme dados em insights valiosos com dashboards interativos e análises preditivas avançadas.',
+    icon: Headset,
+    title: "Suporte Técnico",
+    description:
+      "Equipe especializada alocada na sua empresa para garantir suporte técnico contínuo e resolução ágil de problemas.",
+    link: "/suporte",
   },
   {
     icon: Server,
-    title: 'Gestão de Infraestrutura',
-    description: 'Soluções completas que abrangem desde a arquitetura e implementação inicial até a manutenção contínua de sistemas.',
+    title: "Gestão de Infraestrutura",
+    description:
+      "Soluções completas que abrangem desde a arquitetura e implementação inicial até a manutenção contínua de sistemas.",
+    link: "/infra",
   },
 ];
 
@@ -32,7 +40,8 @@ const Solutions = () => {
             Nossas <span className="text-gradient"> Soluções</span> Tecnológicas
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Oferecemos um conjunto completo de serviços para acelerar sua transformação digital
+            Oferecemos um conjunto completo de serviços para acelerar sua
+            transformação digital
           </p>
         </div>
 
@@ -51,9 +60,7 @@ const Solutions = () => {
                 <h3 className="text-xl font-heading font-semibold mb-3 text-foreground group-hover:text-primary transition-smooth">
                   {solution.title}
                 </h3>
-                <p className="text-muted-foreground">
-                  {solution.description}
-                </p>
+                <p className="text-muted-foreground">{solution.description}</p>
               </div>
             );
           })}

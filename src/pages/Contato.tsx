@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const ContactPage = () => {
-  const phoneNumber = '5511999999999';
+  const phoneNumber = '5521991231585';
   const message = 'Olá! Gostaria de saber mais sobre as soluções da Stellar Syntec.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -47,7 +47,7 @@ const ContactPage = () => {
                 className="text-white text-lg px-8 py-6 h-auto"
               >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-6 w-6" />
+                  {/* <MessageCircle className="mr-2 h-6 w-6" /> */}
                   Conversar no WhatsApp
                 </a>
               </Button>
@@ -60,7 +60,7 @@ const ContactPage = () => {
               Outras Formas de Contato
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex justify-center">
               {/* Phone */}
               <a
                 href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0"

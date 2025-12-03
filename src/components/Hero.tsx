@@ -48,9 +48,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold leading-tight">
-            <span className="text-gradient">Tecnologia</span>
-            <br />
-            <span className="text-foreground">Que Impulsiona a Inovação</span>
+            <span className="text-foreground">Onde a tecnologia encontro o </span>
+            <span className="text-gradient">Infinito</span>
+            
           </h1>
 
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ const Hero = () => {
             >
               Conheça Nossas Soluções
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+             </Button>
             <a href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0" target="_blank">
               <Button
                 size="lg"
@@ -75,7 +75,7 @@ const Hero = () => {
                 >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Fale com um Especialista
-               </Button>
+              </Button>
             </a>
           </div>
         </div>

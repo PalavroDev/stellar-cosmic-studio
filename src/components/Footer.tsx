@@ -38,7 +38,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-primary" />
               </a>
               <a
-                href="tel:+5511999999999"
+                href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0"
                 className="p-2 bg-primary/10 rounded-lg hover:bg-primary/20 transition-smooth group"
               >
                 <Phone className="h-5 w-5 text-primary" />
@@ -93,15 +93,14 @@ const Footer = () => {
               Contato
             </h3>
             <ul className="space-y-2 text-muted-foreground">
+               <a href="mailto:contato@stellarsyntec.com">
               <li>contato@stellarsyntec.com</li>
-              <li>+55 (11) 99999-9999</li>
+              </a>
+              
+              <a href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0">
+              <li>+55 (21) 99123-1585</li>
+              </a>
               <li className="pt-2">
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="text-primary hover:text-primary/80 transition-smooth"
-                >
-                  Formulário de Contato →
-                </button>
               </li>
             </ul>
           </div>
