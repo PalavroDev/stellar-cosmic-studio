@@ -24,6 +24,12 @@ import { Link } from 'react-router-dom';
 import heroBackground from '@/assets/automacoes-hero.jpg';
 
 const AutomacoesPage = () => {
+  const phoneNumber = '5521991231585';
+  
+  const getWhatsAppUrl = (planName: string) => {
+    const message = `Olá! Estou interessado no ${planName} de Automações.`;
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  };
   const services = [
     {
       title: "Automação de Processos",
@@ -206,9 +212,9 @@ const AutomacoesPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contato" className="block">
+                <a href={getWhatsAppUrl('Plano Básico')} target="_blank" rel="noopener noreferrer" className="block">
                   <Button variant="outline" className="w-full">Começar Agora</Button>
-                </Link>
+                </a>
               </CardContent>
             </Card>
 
@@ -235,9 +241,9 @@ const AutomacoesPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contato" className="block">
+                <a href={getWhatsAppUrl('Plano Intermediário')} target="_blank" rel="noopener noreferrer" className="block">
                   <Button variant="gradient" className="w-full">Escolher Plano</Button>
-                </Link>
+                </a>
               </CardContent>
             </Card>
 
@@ -269,9 +275,9 @@ const AutomacoesPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contato" className="block">
+                <a href={getWhatsAppUrl('Plano Ultra')} target="_blank" rel="noopener noreferrer" className="block">
                   <Button variant="gradient" className="w-full">Escolher Plano</Button>
-                </Link>
+                </a>
               </CardContent>
             </Card>
 
@@ -297,9 +303,9 @@ const AutomacoesPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contato" className="block">
+                <a href={getWhatsAppUrl('Plano Personalizável')} target="_blank" rel="noopener noreferrer" className="block">
                   <Button variant="secondary" className="w-full">Falar com Vendas</Button>
-                </Link>
+                </a>
               </CardContent>
             </Card>
           </div>
