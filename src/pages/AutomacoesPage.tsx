@@ -13,7 +13,12 @@ import {
   CheckCircle2,
   Target,
   Award,
-  Star
+  Star,
+  Check,
+  Sparkles,
+  Rocket,
+  Crown,
+  Settings
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroBackground from '@/assets/automacoes-hero.jpg';
@@ -163,6 +168,140 @@ const AutomacoesPage = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Plans Section */}
+      <section className="py-20 bg-background/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
+            Nossos Planos
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Escolha o plano ideal para as necessidades da sua empresa
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {/* Plano Básico */}
+            <Card className="cosmic-card relative overflow-hidden hover:scale-105 transition-smooth">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-muted-foreground" />
+              <CardHeader className="text-center pb-2">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-muted-foreground/20 mx-auto mb-4">
+                  <Sparkles className="h-6 w-6 text-muted-foreground" />
+                </div>
+                <CardTitle className="text-2xl text-foreground">Básico</CardTitle>
+                <CardDescription className="text-muted-foreground">Para pequenas empresas</CardDescription>
+              </CardHeader>
+              <CardContent className="pt-4">
+                <div className="text-center mb-6">
+                  <span className="text-4xl font-bold text-foreground">R$ 497</span>
+                  <span className="text-muted-foreground">/mês</span>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {["Até 5 automações", "Suporte por email", "Integrações básicas", "Relatórios mensais"].map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contato" className="block">
+                  <Button variant="outline" className="w-full">Começar Agora</Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Plano Intermediário */}
+            <Card className="cosmic-card relative overflow-hidden hover:scale-105 transition-smooth">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-primary" />
+              <CardHeader className="text-center pb-2">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 mx-auto mb-4">
+                  <Rocket className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-2xl text-foreground">Intermediário</CardTitle>
+                <CardDescription className="text-muted-foreground">Para empresas em crescimento</CardDescription>
+              </CardHeader>
+              <CardContent className="pt-4">
+                <div className="text-center mb-6">
+                  <span className="text-4xl font-bold text-foreground">R$ 997</span>
+                  <span className="text-muted-foreground">/mês</span>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {["Até 15 automações", "Suporte prioritário", "Integrações avançadas", "Relatórios semanais", "Dashboard personalizado"].map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contato" className="block">
+                  <Button variant="gradient" className="w-full">Escolher Plano</Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Plano Ultra */}
+            <Card className="cosmic-card relative overflow-hidden hover:scale-105 transition-smooth border-primary/50">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary" />
+              <div className="absolute top-4 right-4">
+                <span className="bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded-full">
+                  Popular
+                </span>
+              </div>
+              <CardHeader className="text-center pb-2">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 mx-auto mb-4">
+                  <Crown className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-2xl text-foreground">Ultra</CardTitle>
+                <CardDescription className="text-muted-foreground">Para grandes operações</CardDescription>
+              </CardHeader>
+              <CardContent className="pt-4">
+                <div className="text-center mb-6">
+                  <span className="text-4xl font-bold text-foreground">R$ 1.997</span>
+                  <span className="text-muted-foreground">/mês</span>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {["Automações ilimitadas", "Suporte 24/7", "Todas integrações", "Relatórios em tempo real", "Dashboard avançado", "Gerente dedicado"].map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contato" className="block">
+                  <Button variant="gradient" className="w-full">Escolher Plano</Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Plano Personalizável */}
+            <Card className="cosmic-card relative overflow-hidden hover:scale-105 transition-smooth">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-secondary" />
+              <CardHeader className="text-center pb-2">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary/20 mx-auto mb-4">
+                  <Settings className="h-6 w-6 text-secondary" />
+                </div>
+                <CardTitle className="text-2xl text-foreground">Personalizável</CardTitle>
+                <CardDescription className="text-muted-foreground">Sob medida para você</CardDescription>
+              </CardHeader>
+              <CardContent className="pt-4">
+                <div className="text-center mb-6">
+                  <span className="text-4xl font-bold text-foreground">Sob Consulta</span>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {["Recursos sob demanda", "SLA personalizado", "Integrações custom", "Consultoria dedicada", "Treinamento exclusivo", "Suporte VIP"].map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contato" className="block">
+                  <Button variant="secondary" className="w-full">Falar com Vendas</Button>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
