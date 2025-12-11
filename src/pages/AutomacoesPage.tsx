@@ -1,14 +1,21 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import { 
-  Workflow, 
-  Zap, 
-  Clock, 
-  TrendingUp, 
-  Shield, 
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import {
+  Workflow,
+  Zap,
+  Clock,
+  TrendingUp,
+  Shield,
   Users,
   CheckCircle2,
   Target,
@@ -18,59 +25,94 @@ import {
   Sparkles,
   Rocket,
   Crown,
-  Settings
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import heroBackground from '@/assets/automacoes-hero.jpg';
+  Settings,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import heroBackground from "@/assets/automacoes-hero.jpg";
 
 const AutomacoesPage = () => {
-  const phoneNumber = '5521991231585';
-  
-  const getWhatsAppUrl = (planName: string) => {
-    const message = `Olá! Estou interessado no ${planName} de Automações.`;
+  const [isAnnual, setIsAnnual] = useState(false);
+  const phoneNumber = "5521991231585";
+
+  const getWhatsAppUrl = (planName: string, period: string) => {
+    const message = `Olá! Estou interessado no ${planName} ${period} da GalaxIA.`;
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   };
+
+  const plans = {
+    start: {
+      monthly: 399,
+      annual: 319,
+    },
+    prime: {
+      monthly: 997,
+      annual: 797,
+    },
+    ultra: {
+      monthly: 1997,
+      annual: 1597,
+    },
+  };
+
   const services = [
     {
+      title: "Automação Inteligente",
+      description:
+        "Elimine tarefas manuais repetitivas com robôs de software que trabalham 24/7. Aumente a precisão da sua operação e libere sua equipe para focar no estratégico.",
+    },
+    {
       title: "Automação de Processos",
-      description: "Otimize seus processos empresariais com automação inteligente que reduz custos e aumenta a eficiência operacional."
+      description:
+        "Otimize seus processos empresariais com automação inteligente que reduz custos e aumenta a eficiência operacional.",
     },
     {
       title: "Integração de Sistemas",
-      description: "Conecte todas as suas ferramentas e sistemas em um fluxo de trabalho unificado e automatizado."
+      description:
+        "Conecte todas as suas ferramentas e sistemas em um fluxo de trabalho unificado e automatizado.",
     },
     {
       title: "Workflows Personalizados",
-      description: "Criamos fluxos de trabalho sob medida para atender as necessidades específicas do seu negócio."
-    }
+      description:
+        "Criamos fluxos de trabalho sob medida para atender as necessidades específicas do seu negócio.",
+    },
+    {
+      title: "Plataforma de Atendimento",
+      description:
+        "Atenda seus clientes com mais agilidade, nossa plataforma reune todos os canais de atendimentos em um so lugar.",
+    },
+    {
+      title: "Atendimento Automatico",
+      description:
+        "Garanta a disponibilidade total do seu negócio, oferecendo atendimento inteligente e ininterrupto 24/7.",
+    },
   ];
 
   const benefits = [
     {
       icon: Clock,
       title: "Economia de Tempo",
-      description: "Reduza até 80% do tempo gasto em tarefas repetitivas"
+      description: "Reduza até 80% do tempo gasto em tarefas repetitivas",
     },
     {
       icon: TrendingUp,
       title: "Aumento de Produtividade",
-      description: "Multiplique a capacidade da sua equipe"
+      description: "Multiplique a capacidade da sua equipe",
     },
     {
       icon: Shield,
       title: "Redução de Erros",
-      description: "Elimine erros humanos nos processos"
+      description: "Elimine erros humanos nos processos",
     },
     {
       icon: Users,
       title: "Foco no Estratégico",
-      description: "Libere sua equipe para tarefas de maior valor"
+      description: "Libere sua equipe para tarefas de maior valor",
     },
     {
       icon: Zap,
       title: "Resposta Rápida",
-      description: "Processos executados em tempo real"
-    }
+      description: "Processos executados em tempo real",
+    },
   ];
 
   const differentials = [
@@ -78,51 +120,44 @@ const AutomacoesPage = () => {
     "Implementação ágil e eficiente",
     "Suporte técnico especializado 24/7",
     "Integração com mais de 1000+ ferramentas",
-    "ROI médio de 300% no primeiro ano",
-    "Treinamento completo da equipe"
+    "Crescimento do ROI da sua empresa",
+    "Treinamento completo da equipe",
   ];
 
-  const testimonials = [
-    {
-      quote: "A automação de workflows transformou completamente nossa operação. Reduzimos 70% do tempo em processos administrativos.",
-      author: "João Silva",
-      company: "Tech Solutions Lda"
-    },
-    {
-      quote: "Excelente trabalho! A integração entre nossos sistemas foi perfeita e os resultados superaram nossas expectativas.",
-      author: "Maria Santos",
-      company: "Inovação Digital"
-    }
-  ];
+  const periodLabel = isAnnual ? "Anual" : "Mensal";
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-stellar-dark-muted to-background" />
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${heroBackground})`
+            backgroundImage: `url(${heroBackground})`,
           }}
         />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-        
+
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-fade-in">
-            Automações Inteligentes
+            Automações
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
-            Transforme seu negócio com automação de workflows que economiza tempo, 
-            reduz custos e potencializa seus resultados
+            Transforme seu negócio com automação de workflows que economiza
+            tempo, reduz custos e potencializa seus resultados
           </p>
-          <Link to="/contato">
+          <a
+            href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button size="lg" variant="gradient" className="animate-fade-in">
-              <Workflow className="mr-2 h-5 w-5" />
-              Automatize Seu Negócio
+              Solicitar Orçamento
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -130,50 +165,31 @@ const AutomacoesPage = () => {
       <section className="py-20 bg-background/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Nossos Serviços
+            O que podemos automatizar para sua
+            <span className="text-gradient"> Empresa</span>
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             Soluções completas de automação para cada necessidade do seu negócio
           </p>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="cosmic-card hover:scale-105 transition-smooth">
+              <Card
+                key={index}
+                className="cosmic-card hover:scale-105 transition-smooth"
+              >
                 <CardHeader>
-                  <CardTitle className="text-primary">{service.title}</CardTitle>
+                  <CardTitle className="text-primary">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
+                  <CardDescription className="text-base">
+                    {service.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Benefícios da Automação
-          </h2>
-          <p className="text-center text-muted-foreground mb-12">
-            Vantagens competitivas que farão a diferença no seu negócio
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <div key={index} className="text-center group">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 transition-smooth">
-                    <Icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-2 text-foreground">{benefit.title}</h3>
-                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -182,67 +198,154 @@ const AutomacoesPage = () => {
       <section className="py-20 bg-background/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Nossos Planos
+            Planos <span className="text-gradient"> GalaxIA</span>
           </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Escolha o plano ideal para as necessidades da sua empresa
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Escolha o plano ideal de automação de whatsapp para as necessidades
+            da sua empresa
           </p>
-          
+
+          {/* Toggle Mensal/Anual */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center bg-muted/50 rounded-full p-1 border border-border">
+              <button
+                onClick={() => setIsAnnual(false)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  !isAnnual
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Mensal
+              </button>
+              <button
+                onClick={() => setIsAnnual(true)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  isAnnual
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Anual
+              </button>
+            </div>
+          </div>
+
+          {isAnnual && (
+            <p className="text-center text-primary text-sm mb-8 animate-fade-in">
+              Economize até 20% com o plano anual!
+            </p>
+          )}
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {/* Plano Básico */}
+            {/* Plano Start */}
             <Card className="cosmic-card relative overflow-hidden hover:scale-105 transition-smooth">
               <div className="absolute top-0 left-0 right-0 h-1 bg-muted-foreground" />
               <CardHeader className="text-center pb-2">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-muted-foreground/20 mx-auto mb-4">
                   <Sparkles className="h-6 w-6 text-muted-foreground" />
                 </div>
-                <CardTitle className="text-2xl text-foreground">Básico</CardTitle>
-                <CardDescription className="text-muted-foreground">Para pequenas empresas</CardDescription>
+                <CardTitle className="text-2xl text-foreground">
+                  Start
+                </CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  Para pequenas empresas
+                </CardDescription>
               </CardHeader>
               <CardContent className="pt-4">
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-foreground">R$ 497</span>
+                  <span className="text-4xl font-bold text-foreground">
+                    R$ {isAnnual ? plans.start.annual : plans.start.monthly}
+                  </span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {["Até 5 automações", "Suporte por email", "Integrações básicas", "Relatórios mensais"].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  {[
+                    "1 conta de Whatsapp conectada",
+                    "5 Atendentes",
+                    "ChatBot",
+                    "Transferência de Atendimento",
+                    "1 Assistente de IA",
+                    "Marcador de Contatos",
+                    "Etiquetas de Atendimento",
+                    "Painel de Relatório em Tempo Real",
+                  ].map((feature, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
                       <Check className="h-4 w-4 text-primary flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <a href={getWhatsAppUrl('Plano Básico')} target="_blank" rel="noopener noreferrer" className="block">
-                  <Button variant="outline" className="w-full">Começar Agora</Button>
+                <a
+                  href={getWhatsAppUrl("Plano Start", periodLabel)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button variant="gradient" className="w-full">
+                    Escolher Plano
+                  </Button>
                 </a>
               </CardContent>
             </Card>
 
-            {/* Plano Intermediário */}
+            {/* Plano Prime */}
             <Card className="cosmic-card relative overflow-hidden hover:scale-105 transition-smooth">
               <div className="absolute top-0 left-0 right-0 h-1 bg-primary" />
               <CardHeader className="text-center pb-2">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 mx-auto mb-4">
                   <Rocket className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-2xl text-foreground">Intermediário</CardTitle>
-                <CardDescription className="text-muted-foreground">Para empresas em crescimento</CardDescription>
+                <CardTitle className="text-2xl text-foreground">
+                  Prime
+                </CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  Para empresas em crescimento
+                </CardDescription>
               </CardHeader>
               <CardContent className="pt-4">
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-foreground">R$ 997</span>
+                  <span className="text-4xl font-bold text-foreground">
+                    R$ {isAnnual ? plans.prime.annual : plans.prime.monthly}
+                  </span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {["Até 15 automações", "Suporte prioritário", "Integrações avançadas", "Relatórios semanais", "Dashboard personalizado"].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  {[
+                    "3 conta de Whatsapp conectada",
+                    "8 Atendentes",
+                    "1 Conexão com Instagram e Messanger",
+                    "ChatBot",
+                    "VoiceBot",
+                    "WebChat",
+                    "Transferência de Atendimento",
+                    "3 Assistente de IA",
+                    "Marcador de Contatos",
+                    "Etiquetas de Atendimento",
+                    "Aplicativo IOS & Android",
+                    "Painel de Relatório em Tempo Real",
+                  ].map((feature, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
                       <Check className="h-4 w-4 text-primary flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <a href={getWhatsAppUrl('Plano Intermediário')} target="_blank" rel="noopener noreferrer" className="block">
-                  <Button variant="gradient" className="w-full">Escolher Plano</Button>
+                <a
+                  href={getWhatsAppUrl("Plano Prime", periodLabel)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button variant="gradient" className="w-full">
+                    Escolher Plano
+                  </Button>
                 </a>
               </CardContent>
             </Card>
@@ -259,24 +362,54 @@ const AutomacoesPage = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 mx-auto mb-4">
                   <Crown className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-2xl text-foreground">Ultra</CardTitle>
-                <CardDescription className="text-muted-foreground">Para grandes operações</CardDescription>
+                <CardTitle className="text-2xl text-foreground">
+                  Ultra
+                </CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  Para grandes operações
+                </CardDescription>
               </CardHeader>
               <CardContent className="pt-4">
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-foreground">R$ 1.997</span>
+                  <span className="text-4xl font-bold text-foreground">
+                    R$ {isAnnual ? plans.ultra.annual.toLocaleString('pt-BR') : plans.ultra.monthly.toLocaleString('pt-BR')}
+                  </span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {["Automações ilimitadas", "Suporte 24/7", "Todas integrações", "Relatórios em tempo real", "Dashboard avançado", "Gerente dedicado"].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  {[
+                    "4 conta de Whatsapp conectada",
+                    "20 Atendentes",
+                    "3 Conexão com Instagram e Messanger",
+                    "Interpretação de Imagens",
+                    "ChatBot",
+                    "VoiceBot",
+                    "WebChat",
+                    "Transferência de Atendimento",
+                    "5 Assistente de IA",
+                    "Marcador de Contatos",
+                    "Etiquetas de Atendimento",
+                    "Aplicativo IOS & Android",
+                    "Painel de Relatório em Tempo Real",
+                  ].map((feature, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
                       <Check className="h-4 w-4 text-primary flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <a href={getWhatsAppUrl('Plano Ultra')} target="_blank" rel="noopener noreferrer" className="block">
-                  <Button variant="gradient" className="w-full">Escolher Plano</Button>
+                <a
+                  href={getWhatsAppUrl("Plano Ultra", periodLabel)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button variant="gradient" className="w-full">
+                    Escolher Plano
+                  </Button>
                 </a>
               </CardContent>
             </Card>
@@ -288,26 +421,82 @@ const AutomacoesPage = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary/20 mx-auto mb-4">
                   <Settings className="h-6 w-6 text-secondary" />
                 </div>
-                <CardTitle className="text-2xl text-foreground">Personalizável</CardTitle>
-                <CardDescription className="text-muted-foreground">Sob medida para você</CardDescription>
+                <CardTitle className="text-2xl text-foreground">
+                  Personalizável
+                </CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  Sob medida para você
+                </CardDescription>
               </CardHeader>
               <CardContent className="pt-4">
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-foreground">Sob Consulta</span>
+                  <span className="text-4xl font-bold text-foreground">
+                    Sob Consulta
+                  </span>
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {["Recursos sob demanda", "SLA personalizado", "Integrações custom", "Consultoria dedicada", "Treinamento exclusivo", "Suporte VIP"].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  {[
+                    "Canais e Atendentes Ilimitados",
+                    "Múltiplas Conexões",
+                    "Gestor de Sucesso do Cliente",
+                    "Desenvolvimento de Bots Sob Medida",
+                    "SLA e Suporte Prioritário",
+                    "Hospedagem Dedicada",
+                    "Painel de Analytics Avançado",
+                    "Automação de Processos Complexos",
+                  ].map((feature, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
                       <Check className="h-4 w-4 text-primary flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <a href={getWhatsAppUrl('Plano Personalizável')} target="_blank" rel="noopener noreferrer" className="block">
-                  <Button variant="secondary" className="w-full">Falar com Vendas</Button>
+                <a
+                  href={getWhatsAppUrl("Plano Personalizável", "")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button variant="secondary" className="w-full">
+                    Falar com Vendas
+                  </Button>
                 </a>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
+            Benefícios da Automação
+          </h2>
+          <p className="text-center text-muted-foreground mb-12">
+            Vantagens competitivas que farão a diferença no seu negócio
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <div key={index} className="text-center group">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 transition-smooth">
+                    <Icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold mb-2 text-foreground">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {benefit.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -316,12 +505,15 @@ const AutomacoesPage = () => {
       <section className="py-20 bg-background/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
-            Por Que Escolher a Stellar Syntec?
+            <span>Por Que Escolher a</span>{" "}
+            <span className="text-gradient">Stellar Syntec?</span>
           </h2>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {differentials.map((differential, index) => (
-              <div key={index} className="flex items-start gap-3 p-4 rounded-lg hover:bg-muted/20 transition-smooth">
+              <div
+                key={index}
+                className="flex items-start gap-3 p-4 rounded-lg hover:bg-muted/20 transition-smooth"
+              >
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <p className="text-foreground">{differential}</p>
               </div>
@@ -330,60 +522,42 @@ const AutomacoesPage = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            O Que Nossos Clientes Dizem
-          </h2>
-          <p className="text-center text-muted-foreground mb-12">
-            Resultados reais de empresas que automatizaram com a Stellar Syntec
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="cosmic-card">
-                <CardContent className="pt-6">
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <p className="text-foreground mb-6 italic">"{testimonial.quote}"</p>
-                  <div>
-                    <p className="font-semibold text-primary">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary via-primary/90 to-secondary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 30% 50%, white 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 30% 50%, white 1px, transparent 1px)",
+              backgroundSize: "50px 50px",
+            }}
+          />
         </div>
-        
+
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Award className="h-16 w-16 mx-auto mb-6 text-primary-foreground" />
           <h2 className="text-4xl font-bold mb-4 text-primary-foreground">
             Pronto Para Automatizar?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Agende uma consultoria gratuita e descubra como podemos transformar seus processos
+            Agende uma consultoria gratuita e descubra como podemos transformar
+            seus processos
           </p>
-          <Link to="/contato">
-            <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90">
+          <a
+            href="https://api.whatsapp.com/send/?phone=5521991231585&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-background text-foreground hover:bg-background/90"
+            >
               <Target className="mr-2 h-5 w-5" />
               Fale Com Especialista
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 
