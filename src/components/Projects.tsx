@@ -1,32 +1,36 @@
 import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import automacoesImage from '@/assets/automacoes-hero.jpg';
+import desenvolvimentoImage from '@/assets/desenvolvimento-hero.jpg';
+import infraestruturaImage from '@/assets/infraestrutura-hero.jpg';
+import suporteImage from '@/assets/suporte-hero.jpg';
 
 const projects = [
   {
     title: 'Sistema de Gestão Empresarial',
     description: 'Plataforma completa para gerenciamento de recursos, finanças e operações.',
     technologies: ['React', 'Node.js', 'PostgreSQL'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
+    image: automacoesImage,
     link: '/automacoes',
   },
   {
     title: 'E-commerce Inteligente',
     description: 'Solução de vendas online com recomendações personalizadas por IA.',
     technologies: ['Next.js', 'Python', 'TensorFlow'],
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop',
+    image: desenvolvimentoImage,
   },
   {
     title: 'Dashboard Analytics',
     description: 'Visualização de dados em tempo real com insights automatizados.',
     technologies: ['Vue.js', 'FastAPI', 'MongoDB'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
+    image: infraestruturaImage,
   },
   {
     title: 'App de Automação Industrial',
     description: 'Controle e monitoramento de processos industriais via IoT.',
     technologies: ['React Native', 'MQTT', 'AWS IoT'],
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop',
+    image: suporteImage,
   },
 ];
 
