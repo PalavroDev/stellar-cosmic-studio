@@ -10,6 +10,7 @@ import AutomacoesPage from "./pages/AutomacoesPage";
 import DesenvolvimentoPage from "./pages/DesenvolvimentoPage";
 import InfraestruturaPage from "./pages/InfraestruturaPage";
 import SuporteTecnicoPage from "./pages/SuporteTecnicoPage";
+import GalaxiaPage from "./pages/GalaxiaPage";
 import MessagesPage from "./pages/MessagesPage";
 import NotFound from "./pages/NotFound";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/desenvolvimento" element={<DesenvolvimentoPage />} />
           <Route path="/infraestrutura" element={<InfraestruturaPage />} />
           <Route path="/suporte-tecnico" element={<SuporteTecnicoPage />} />
+          <Route path="/galaxia" element={<GalaxiaPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

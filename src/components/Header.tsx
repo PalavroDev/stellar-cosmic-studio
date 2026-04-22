@@ -88,6 +88,15 @@ const Header = () => {
                   asChild
                   className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
                 >
+                  <Link to="/galaxia">
+                    <span className="font-semibold text-base text-foreground">GALAXIA</span>
+                    <span className="text-sm text-muted-foreground">Plataforma de Atendimento Omnichannel</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  asChild
+                  className="flex flex-col items-start p-4 cursor-pointer hover:bg-primary/10 focus:bg-primary/10 border-b border-[#00FEFF]/30"
+                >
                   <Link to="/desenvolvimento">
                     <span className="font-semibold text-base text-foreground">DESENVOLVIMENTO</span>
                     <span className="text-sm text-muted-foreground">Soluções de Desenvolvimento de Aplicações e Software</span>
